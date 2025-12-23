@@ -60,12 +60,11 @@ English, 中文 (Chinese), Español (Spanish), हिन्दी (Hindi), ال�
 ```
 Sentiment-Analysis-System/
 │
-├── Sentiment_Analysis/
-│   └── sentiment_model/           # Local trained model & tokenizer files
-│       ├── config.json
-│       ├── pytorch_model.bin
-│       ├── tokenizer.json
-│       └── vocab files
+├── sentiment_model/           # Local trained model & tokenizer files
+│   ├── config.json
+│   ├── pytorch_model.bin
+│   ├── tokenizer.json
+│   └── vocab files
 │
 ├── inference.py                   # Sentiment prediction script
 └── README.md                      # Project documentation
@@ -90,7 +89,7 @@ pip install torch transformers
 Ensure your trained model and tokenizer are available locally at:
 
 ```
-./Sentiment_Analysis/sentiment_model
+./sentiment_model
 ```
 
 The system loads the model using:
@@ -109,7 +108,7 @@ Create or run the inference script:
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
-MODEL_PATH = "./Sentiment_Analysis/sentiment_model"
+MODEL_PATH = "./sentiment_model"
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH, local_files_only=True)
 model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH, local_files_only=True)
