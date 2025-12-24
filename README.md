@@ -58,7 +58,7 @@ English, 中文 (Chinese), Español (Spanish), हिन्दी (Hindi), ال�
 ## **Project Structure**
 
 ```
-Sentiment-Analysis-System/
+Sentiment_Analysis_System/
 │
 ├── sentiment_model/           # Local trained model & tokenizer files
 │   ├── config.json
